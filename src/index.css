@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(33, 33, 33, 1); /* Dark text color */
+  background-color: #f5f5dc; /* Beige background */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,26 +13,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #f5f5dc; /* Beige */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.container {
+  padding: 20px;
+  border: 2px solid #000; /* Black border */
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff; /* White background inside the container */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  color: #333; /* Dark text color */
+}
+
+h1, h3, h4 {
+  color: #333; /* Dark text for headings */
+}
+
+input {
+  padding: 0.5em;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #e0c4a6; /* Deep beige background */
+  color: #333;
 }
 
 button {
@@ -42,27 +54,72 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #d9a3a3; /* Dusky pink buttons */
+  color: #333; /* Dark button text */
   cursor: pointer;
   transition: border-color 0.25s;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for buttons */
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: #b98a8a; /* Slightly darker pink for hover effect */
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.5em 0;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+li::before {
+  content: '•'; /* Custom bullet */
+  color: #d9a3a3; /* Dusky pink bullet */
+  font-size: 1.5em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+span {
+  font-size: 1.2em;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: #b2c7b2; /* Soft green for completed tasks */
+}
+
+.completed-task-pink {
+  text-decoration: line-through;
+  color: #d9a3a3; /* Dusky pink option for completed tasks */
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #333;
+    background-color: #f5f5dc; /* Beige for light mode */
   }
-  a:hover {
-    color: #747bff;
+
+  input {
+    background-color: #e0c4a6; /* Deep beige for input box */
   }
+
   button {
-    background-color: #f9f9f9;
+    background-color: #d9a3a3; /* Dusky pink */
+    border: 1px solid #b98a8a; /* Soft pink border */
+  }
+
+  button:hover {
+    border-color: #a97a7a;
   }
 }
